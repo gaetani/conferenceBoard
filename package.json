@@ -8,7 +8,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "hekk"
+    "test": "mocha test/*.js"
   },
   "author": "",
   "license": "ISC",

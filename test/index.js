@@ -1,5 +1,4 @@
 
-const expect    = require("chai").expect;
 const path = require('path');
 const track = require(path.resolve('src/index'));
 const conference = 'Writing Fast Tests Against Enterprise Rails 60min\n'+
@@ -51,7 +50,7 @@ const output = 'Track 1:' +
 describe("Conference Track Management", function() {
     describe("Should organize the conference", function() {
         it("organize all the conference", function() {
-            track.show(conference);
+            track.organizeAndPrint(conference);
         });
     });
 });
