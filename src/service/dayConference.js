@@ -60,10 +60,11 @@ const transform = (dayConferences) => {
 };
 
 const logInOutput = (outputs) => {
-    outputs.forEach((output, index) => {
-        const trackOutput = `Track ${index + 1}\n${output}`;
-        console.log(trackOutput);
-    });
+    const template = (index, description) => `Track ${index}\n${description}`;
+    const output = outputs.reduce((previous, after, index) => {
+        return previous + template(index+1, after);
+    }, '');
+    return output;
 };
 
 function organizeAndPrint(event) {
@@ -72,7 +73,7 @@ function organizeAndPrint(event) {
         console.log('nothing to organize');
         return;
     }
-    transformTrack(lines)
+    return  transformTrack(lines)
         .then(manage)
         .then(transform)
         .then(logInOutput)
@@ -81,7 +82,7 @@ function organizeAndPrint(event) {
 
 module.exports = {
     organizeAndPrint: organizeAndPrint,
-    logInOutput: logInOutput,
+    manage: manage,
     organizeEvents: organizeEvents,
     organizeDayConference: organizeDayConference
 };

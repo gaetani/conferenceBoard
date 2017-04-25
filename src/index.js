@@ -3,7 +3,8 @@ const dayConferenceService = require('./service/dayConference');
 
 const readFileTrack = (err, data) => {
     if (err) throw err;
-    dayConferenceService.organizeAndPrint(data);
+    dayConferenceService.organizeAndPrint(data)
+        .then(console.log);
 };
 
 

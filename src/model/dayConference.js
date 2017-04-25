@@ -2,7 +2,7 @@
 function Conference(event, duration, isLigthning) {
     this.event = event;
     this.duration = duration;
-    this.isLigthning = isLigthning;
+    this.isLigthning = !!isLigthning;
 }
 
 function DayConference(){
