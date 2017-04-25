@@ -1,6 +1,6 @@
 Conference Track Management Solutions
 
-There could be many ways to approach the solution. I decide to go further with functional design the solution of this problem, developing a greedy algorithm.
+There could be many ways to approach the solution. I decide to go further with a functional design for the solution of this problem, developing a greedy algorithm.
 
 This solution required improvement (not limited to)
 
